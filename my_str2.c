@@ -5,10 +5,11 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 18:15:30 2015 jamal elbouhali
-** Last update Tue Jan 27 18:16:01 2015 jamal elbouhali
+** Last update Tue Jan 27 18:36:48 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
+#include "my.h"
 
 int     my_strcmp(char *s1, char *s2)
 {

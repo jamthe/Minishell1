@@ -1,11 +1,11 @@
 /*
-** get_next_line.c for gnl.c in /home/elbouh_j/Wolf3D/source
+** get_next_line.c for gnl in /home/elbouh_j/PSU_2014_minishell1
 ** 
 ** Made by jamal elbouhali
 ** Login   <elbouh_j@epitech.net>
 ** 
-** Started on  Fri Dec 26 15:43:45 2014 jamal elbouhali
-** Last update Fri Jan  2 22:48:21 2015 jamal elbouhali
+** Started on  Tue Jan 27 18:35:33 2015 jamal elbouhali
+** Last update Tue Jan 27 18:35:35 2015 jamal elbouhali
 */
 
 #include <stdlib.h>

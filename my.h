@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Thu Jan 22 13:56:51 2015 jamal elbouhali
-** Last update Tue Jan 27 15:01:59 2015 jamal elbouhali
+** Last update Tue Jan 27 18:45:37 2015 jamal elbouhali
 */
 
 #ifndef MY_H_
@@ -22,6 +22,14 @@ void	my_putchar(char c);
 int	my_strlen(char *str);
 void	*xmalloc(int n);
 int	my_strncmp(char *s1, char *s2, int nb);
+int	my_strcmp(char *s1, char *s2);
 char	*get_env(char *str, char **env);
-	
+int	check_builtin(char **env, char *com);
+int     my_cd(char **env);
+int     my_unsetenv(char **env);
+int     my_setenv(char **env);
+int     my_env(char **env);
+int     my_exit(char **env);
+
+
 #endif /* !MY_H_ */

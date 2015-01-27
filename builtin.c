@@ -5,12 +5,10 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 14:28:49 2015 jamal elbouhali
-** Last update Tue Jan 27 18:34:32 2015 jamal elbouhali
+** Last update Tue Jan 27 18:36:32 2015 jamal elbouhali
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-
+#include "my.h"
 
 int	check_builtin(char **env, char *com)
 {
