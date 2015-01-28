@@ -5,7 +5,7 @@
 ## Login   <elbouh_j@epitech.net>
 ## 
 ## Started on  Wed Jan 21 13:27:58 2015 jamal elbouhali
-## Last update Tue Jan 27 18:46:08 2015 jamal elbouhali
+## Last update Wed Jan 28 13:39:43 2015 jamal elbouhali
 ##
 
 CC	= gcc
@@ -23,7 +23,8 @@ SRCS	= main.c \
 	  my_str.c \
 	  my_str2.c \
 	  builtin.c \
-	  fbuiltin.c
+	  fbuiltin.c \
+	  exec.c
 
 OBJS	= $(SRCS:.c=.o)
 
