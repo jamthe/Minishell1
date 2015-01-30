@@ -5,9 +5,10 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 18:37:04 2015 jamal elbouhali
-** Last update Wed Jan 28 13:47:01 2015 jamal elbouhali
+** Last update Fri Jan 30 15:01:21 2015 jamal elbouhali
 */
 
+#include <stdlib.h>
 #include "my.h"
 
 int	my_cd()
@@ -36,6 +37,6 @@ int	my_env(char **env)
 
 int	my_exit(char **env)
 {
-  my_putstr("Jamal\n");
+  exit(0);
   return (0);
 }

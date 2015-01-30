@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 18:15:30 2015 jamal elbouhali
-** Last update Tue Jan 27 18:36:48 2015 jamal elbouhali
+** Last update Fri Jan 30 17:42:49 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -27,3 +27,35 @@ int     my_strcmp(char *s1, char *s2)
   return (0);
 }
 
+char    *my_strcpy(char *dest, char *src)
+{
+  int   x;
+
+  x = 0;
+  while (src[x] != '\0')
+    {
+      dest[x] = src[x];
+      x = x + 1;
+    }
+  dest[x] = 0;
+  return (dest);
+}
+
+char    *my_strcat(char *dest, char *src)
+{
+  int   up;
+  int   of;
+
+  up = 0;
+  of = my_strlen(dest);
+  dest[of] = '/';
+  of = of + 1;
+  while (src[up] != '\0')
+    {
+      dest[of] = src[up];
+      up = up + 1;
+      of = of + 1;
+    }
+  dest[of] = '\0';
+  return (dest);
+}

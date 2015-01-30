@@ -5,14 +5,14 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 13:45:46 2015 jamal elbouhali
-** Last update Tue Jan 27 14:05:03 2015 jamal elbouhali
+** Last update Wed Jan 28 13:10:45 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include "my.h"
 
-char    *get_env(char *str, char **env)
+char    *my_getenv(char *str, char **env)
 {
   int   i;
   char  *j;

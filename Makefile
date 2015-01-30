@@ -5,7 +5,7 @@
 ## Login   <elbouh_j@epitech.net>
 ## 
 ## Started on  Wed Jan 21 13:27:58 2015 jamal elbouhali
-## Last update Wed Jan 28 13:39:43 2015 jamal elbouhali
+## Last update Fri Jan 30 15:36:06 2015 jamal elbouhali
 ##
 
 CC	= gcc
@@ -24,7 +24,11 @@ SRCS	= main.c \
 	  my_str2.c \
 	  builtin.c \
 	  fbuiltin.c \
-	  exec.c
+	  my_wtcpy.c \
+	  exec.c \
+	  init.c \
+	  show.c \
+	  wordtab.c 
 
 OBJS	= $(SRCS:.c=.o)
 

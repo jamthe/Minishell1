@@ -5,14 +5,14 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 14:28:49 2015 jamal elbouhali
-** Last update Wed Jan 28 13:57:03 2015 jamal elbouhali
+** Last update Fri Jan 30 15:03:33 2015 jamal elbouhali
 */
 
 #include "my.h"
 
 int	check_builtin(char *com)
 {
-  if ( (my_strcmp(com, "cd\n")) == 0 || (my_strcmp(com, "cd")) == 0)
+  if ((my_strcmp(com, "cd\n")) == 0)
     my_cd();
   else if ((my_strcmp(com, "setenv\n")) == 0)
     my_setenv();
@@ -22,10 +22,10 @@ int	check_builtin(char *com)
     my_env();
   else if ((my_strcmp(com, "exit\n")) == 0)
     my_exit();
-  /*  else
+  /*   else
     {
       my_putstr("NO BUILTIN\n");
       return (1);
       }*/
-  return (0);
+  return (1);
 }
