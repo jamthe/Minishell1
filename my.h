@@ -5,12 +5,11 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Thu Jan 22 13:56:51 2015 jamal elbouhali
-** Last update Fri Jan 30 15:58:25 2015 jamal elbouhali
+** Last update Fri Jan 30 20:19:26 2015 jamal elbouhali
 */
 
 #ifndef MY_H_
 # define MY_H_
-
 
 typedef struct s_struct
 {
@@ -40,10 +39,14 @@ int     my_unsetenv();
 int     my_setenv();
 int     my_env();
 int     my_exit();
-int	check_exec(char *com);
+char	**check_exec(char **com, char **buf, char **env);
 char	*my_strcpy(char *dest, char *src);
 int	my_tab_len(char **env);
 char	**wtcpy(char **env);
 char	*my_strcat(char *dest, char *src);
+char	**get_path(char **env);
+char	**str_wordtab_tab(char *str);
+int     my_countY_tab(char *str);
+int     my_countX_tab(char *str);
 
 #endif /* !MY_H_ */

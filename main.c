@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Mon Jan 19 21:34:51 2015 jamal elbouhali
-** Last update Fri Jan 30 14:59:07 2015 jamal elbouhali
+** Last update Fri Jan 30 20:18:47 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -13,19 +13,31 @@
 #include <unistd.h>
 #include <stdio.h>
 
+char	**get_path(char **env)
+{
+  char	*str;
+
+  str = my_getenv("PATH=", env);
+  return (str_wordtab(str));
+}
+
 int	main(int ac, char **av, char **env)
 {
   char	**env2;
   char	buf[4096];
   int	i;
+  char	**path;
+  char	**comm;
 
   env2 = wtcpy(env);
+  path = get_path(env2);
   my_putstr("$> ");
   while ((i = read(0, buf, 4096)) > 0)
     {
       buf[i] = 0;
+      comm = str_wordtab_tab(buf);
       check_builtin(buf);
-      check_exec(buf);
+      check_exec(comm, path, env2);
       my_putstr("$> ");
     }
   return (0);

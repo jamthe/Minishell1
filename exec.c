@@ -5,10 +5,29 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 13:38:34 2015 jamal elbouhali
-** Last update Wed Jan 28 13:39:14 2015 jamal elbouhali
+** Last update Fri Jan 30 20:33:42 2015 jamal elbouhali
 */
 
-int	check_exec(char *com)
+#include <unistd.h>
+#include <stdlib.h>
+#include "my.h"
+
+char	**check_exec(char **com, char **path, char **env)
 {
-  return (0);
+  int	i;
+  char	*s;
+
+  i = 0;
+  while (path[i] != NULL)
+    {
+      s = my_strcat(path[i], com[0]);
+      if (access(s, X_OK) == 0)
+	{
+	  execve(s, com, env);
+	  my_putstr(s);
+	  return (env);
+	}
+      i++;
+    }
+  return (NULL);
 }
