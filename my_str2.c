@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 18:15:30 2015 jamal elbouhali
-** Last update Fri Jan 30 17:42:49 2015 jamal elbouhali
+** Last update Sat Jan 31 14:54:17 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -56,6 +56,6 @@ char    *my_strcat(char *dest, char *src)
       up = up + 1;
       of = of + 1;
     }
-  dest[of] = '\0';
+  dest[of - 1] = '\0';
   return (dest);
 }

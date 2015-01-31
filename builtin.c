@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 14:28:49 2015 jamal elbouhali
-** Last update Fri Jan 30 15:03:33 2015 jamal elbouhali
+** Last update Sat Jan 31 14:59:30 2015 jamal elbouhali
 */
 
 #include "my.h"
@@ -22,10 +22,9 @@ int	check_builtin(char *com)
     my_env();
   else if ((my_strcmp(com, "exit\n")) == 0)
     my_exit();
-  /*   else
+  else
     {
-      my_putstr("NO BUILTIN\n");
       return (1);
-      }*/
-  return (1);
+    }
+  return (0);
 }

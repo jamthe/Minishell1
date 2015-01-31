@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 13:38:34 2015 jamal elbouhali
-** Last update Fri Jan 30 20:33:42 2015 jamal elbouhali
+** Last update Fri Jan 30 22:58:27 2015 jamal elbouhali
 */
 
 #include <unistd.h>
@@ -24,10 +24,9 @@ char	**check_exec(char **com, char **path, char **env)
       if (access(s, X_OK) == 0)
 	{
 	  execve(s, com, env);
-	  my_putstr(s);
 	  return (env);
 	}
-      i++;
+      i = i + 1;
     }
   return (NULL);
 }

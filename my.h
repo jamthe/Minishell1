@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Thu Jan 22 13:56:51 2015 jamal elbouhali
-** Last update Fri Jan 30 20:19:26 2015 jamal elbouhali
+** Last update Sat Jan 31 14:51:09 2015 jamal elbouhali
 */
 
 #ifndef MY_H_
@@ -23,9 +23,9 @@ void    show(char **result);
 void    lis(char *str);
 char    *my_getenv(char *str, char **env);
 void    *xmalloc(int size);
-char    **str_wordtab(char *str);
-int     my_countY(char *str);
-int     my_countX(char *str);
+char    **str_wordtab(char *str, char j);
+int     my_countY(char *str, char d);
+int     my_countX(char *str, char j);
 char    *get_env(char *str, char **env);
 void	my_putstr(char *str);
 void	my_putchar(char c);
@@ -45,8 +45,5 @@ int	my_tab_len(char **env);
 char	**wtcpy(char **env);
 char	*my_strcat(char *dest, char *src);
 char	**get_path(char **env);
-char	**str_wordtab_tab(char *str);
-int     my_countY_tab(char *str);
-int     my_countX_tab(char *str);
 
 #endif /* !MY_H_ */

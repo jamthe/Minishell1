@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Mon Jan 19 21:34:51 2015 jamal elbouhali
-** Last update Fri Jan 30 20:18:47 2015 jamal elbouhali
+** Last update Sat Jan 31 15:02:39 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -18,7 +18,7 @@ char	**get_path(char **env)
   char	*str;
 
   str = my_getenv("PATH=", env);
-  return (str_wordtab(str));
+  return (str_wordtab(str, ':'));
 }
 
 int	main(int ac, char **av, char **env)
@@ -35,9 +35,9 @@ int	main(int ac, char **av, char **env)
   while ((i = read(0, buf, 4096)) > 0)
     {
       buf[i] = 0;
-      comm = str_wordtab_tab(buf);
-      check_builtin(buf);
-      check_exec(comm, path, env2);
+      comm = str_wordtab(buf, ' ');
+      if (check_builtin(buf) == 1)
+	check_exec(comm, path, env2);
       my_putstr("$> ");
     }
   return (0);

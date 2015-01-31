@@ -5,40 +5,14 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 11:25:53 2015 jamal elbouhali
-** Last update Fri Jan 30 19:21:14 2015 jamal elbouhali
+** Last update Sat Jan 31 14:49:13 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
 #include "my.h"
 
-char		**str_wordtab(char *str)
-{
-  char		**tab;
-  t_struct	c;
 
-  init(&c);
-  if ((tab = xmalloc(sizeof(*tab) * ((my_countY(str) + 1)))) == NULL)
-    return (NULL);
-  while (str[c.i] != '\0')
-    {
-      if (str[c.i] == ':')
-	{
-	  while (str[c.i] == ':')
-	    c.i = c.i + 1;
-	  c.j = c.j + 1;
-	  c.b = 0;
-	}
-      if ((tab[c.j] = xmalloc(sizeof(char) * (my_countX(str) + 1))) == NULL)
-	return (NULL);
-      while ((str[c.i] != ':') && (str[c.i] != '\0'))
-	tab[c.j][c.b++] = str[c.i++];
-      tab[c.j][c.b] = '\0';
-    }
-  tab[c.j + 1] = 0;
-  return (tab);
-}
-
-int	my_countY(char *str)
+int	my_countY(char *str, char d)
 {
   int	i;
   int	j;
@@ -47,20 +21,46 @@ int	my_countY(char *str)
   j = 1;
   while (str[i] != '\0')
     {
-      if (str[i] == ':' && str[i + 1] != '\0')
+      if (str[i] == d && str[i + 1] != '\0')
 	j = j + 1;
       i = i + 1;
     }
   return (j);
 }
 
-int	my_countX(char *str)
+int	my_countX(char *str, char j)
 {
   int	i;
 
   i = 0;
-  while ((str[i] != ':') && (str[i] != '\0'))
+  while ((str[i] != j) && (str[i] != '\0'))
     i = i + 1;
   i = i + 1;
   return (i);
+}
+
+char		**str_wordtab(char *str, char j)
+{
+  char		**tab;
+  t_struct	c;
+
+  init(&c);
+  if ((tab = xmalloc(sizeof(*tab) *
+		     ((my_countY(str, j) + 1)))) == NULL)
+    return (NULL);
+  while (str[c.i] != '\0')
+    {
+      while (str[c.i] == j)
+	c.i = c.i + 1;
+      if ((tab[c.j] = xmalloc(sizeof(char) *
+			      (my_countX(str + c.i, j) + 1))) == NULL)
+	return (NULL);
+      c.b = 0;
+      while ((str[c.i] != j && str[c.i] != '\0'))
+	tab[c.j][c.b++] = str[c.i++];
+      tab[c.j][c.b] = '\0';
+      c.j = c.j + 1;
+    }
+  tab[c.j] = 0;
+  return (tab);
 }
