@@ -5,7 +5,7 @@
 ## Login   <elbouh_j@epitech.net>
 ## 
 ## Started on  Wed Jan 21 13:27:58 2015 jamal elbouhali
-## Last update Sun Feb  1 18:30:32 2015 jamal elbouhali
+## Last update Sun Feb  1 23:38:00 2015 jamal elbouhali
 ##
 
 CC	= gcc
@@ -25,6 +25,7 @@ SRCS	= main.c \
 	  fbuiltin.c \
 	  show.c \
 	  wordtab.c \
+	  my_xy_tab.c \
 	  exec.c 
 
 
