@@ -5,19 +5,19 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Sun Feb  1 18:19:56 2015 jamal elbouhali
-** Last update Sun Feb  1 18:19:57 2015 jamal elbouhali
+** Last update Sun Feb  1 22:50:57 2015 jamal elbouhali
 */
 
 #include "my.h"
 
-void	show(char **result)
+void	show(char **tab)
 {
   int	i;
 
   i = 0;
-  while (result[i])
+  while (tab[i])
     {
-      my_putstr(result[i]);
+      my_putstr(tab[i]);
       my_putchar('\n');
       i = i + 1;
     }

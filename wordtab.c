@@ -5,20 +5,13 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 11:25:53 2015 jamal elbouhali
-** Last update Sun Feb  1 19:58:43 2015 jamal elbouhali
+** Last update Sun Feb  1 23:04:55 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
 #include "my.h"
 
-void    init(t_struct *c)
-{
-  c->i = 0;
-  c->j = 0;
-  c->b = 0;
-}
-
-int	my_y(char *str, char d)
+int	yy(char *str, char d)
 {
   int	i;
   int	j;
@@ -34,7 +27,7 @@ int	my_y(char *str, char d)
   return (j);
 }
 
-int	my_x(char *str, char j)
+int	xx(char *str, char j)
 {
   int	i;
 
@@ -48,27 +41,28 @@ int	my_x(char *str, char j)
 char		**word_tab(char *str, char j)
 {
   char		**tab;
-  t_struct	c;
+  int		a;
+  int		b;
+  int		c;
 
-  init(&c);
+  a = 0;
+  b = 0;
+  c = 0;
   if (str == NULL)
     return (NULL);
-  if ((tab = xmalloc(sizeof(*tab) *
-		     ((my_y(str, j) + 1)))) == NULL)
+  if ((tab = xmalloc(sizeof(*tab) *((yy(str, j) + 1)))) == NULL)
     return (NULL);
-  while (str[c.i] != '\0')
+  while (str[a] != '\0')
     {
-      while (str[c.i] == j)
-	c.i = c.i + 1;
-      if ((tab[c.j] = xmalloc(sizeof(char) *
-			      (my_x(str + c.i, j) + 1))) == NULL)
+      while (str[a] == j)
+	a = a + 1;
+      if ((tab[c] = xmalloc(sizeof(char) *(xx(str + a, j) + 1))) == NULL)
 	return (NULL);
-      c.b = 0;
-      while ((str[c.i] != j && str[c.i] != '\0'))
-	tab[c.j][c.b++] = str[c.i++];
-      tab[c.j][c.b] = '\0';
-      c.j = c.j + 1;
+      while ((str[a] != j && str[a] != '\0'))
+	tab[c][b++] = str[a++];
+      tab[c][b] = '\0';
+      c = c + 1;
     }
-  tab[c.j] = NULL;
+  tab[c] = NULL;
   return (tab);
 }

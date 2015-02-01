@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Thu Jan 22 13:56:51 2015 jamal elbouhali
-** Last update Sun Feb  1 18:41:26 2015 jamal elbouhali
+** Last update Sun Feb  1 23:05:31 2015 jamal elbouhali
 */
 
 #ifndef MY_H_
@@ -15,20 +15,12 @@
 # include <sys/types.h>
 # include <signal.h>
 
-typedef struct	s_struct
-{
-  int		i;
-  int		j;
-  int		b;
-}		t_struct;
-
-void		show(char **result);
-void		init(t_struct *c);
+void		show(char **tab);
 char		*my_getenv(char *str, char **env);
 void		*xmalloc(int size);
 char		**word_tab(char *str, char j);
-int		my_y(char *str, char d);
-int		my_x(char *str, char j);
+int		yy(char *str, char d);
+int		xx(char *str, char j);
 char		*get_env(char *str, char **env);
 void		my_putstr(char *str);
 void		my_putchar(char c);
