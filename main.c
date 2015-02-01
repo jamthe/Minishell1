@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Mon Jan 19 21:34:51 2015 jamal elbouhali
-** Last update Sun Feb  1 14:29:06 2015 jamal elbouhali
+** Last update Sun Feb  1 16:41:58 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -41,7 +41,7 @@ int	main(int ac, char **av, char **env)
     {
       buf[i] = 0;
       comm = str_wordtab(buf, ' ');
-      if (check_builtin(buf) == 1 && buf[0] != '\n')
+      if (check_builtin(comm, env2) == 1 && buf[0] != '\n')
 	check_exec(comm, path, env2);
       my_putstr("$> ");
     }

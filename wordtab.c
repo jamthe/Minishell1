@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 11:25:53 2015 jamal elbouhali
-** Last update Sat Jan 31 14:49:13 2015 jamal elbouhali
+** Last update Sun Feb  1 16:36:24 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -61,6 +61,6 @@ char		**str_wordtab(char *str, char j)
       tab[c.j][c.b] = '\0';
       c.j = c.j + 1;
     }
-  tab[c.j] = 0;
+  tab[c.j] = NULL;
   return (tab);
 }

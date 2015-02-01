@@ -5,12 +5,14 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 13:38:34 2015 jamal elbouhali
-** Last update Sun Feb  1 14:16:49 2015 jamal elbouhali
+** Last update Sun Feb  1 15:39:07 2015 jamal elbouhali
 */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <signal.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include "my.h"
 
 char	**check_exec(char **com, char **path, char **env)
@@ -48,6 +50,6 @@ int	exec(char **com, char **path, char **env, pid_t child)
 	}
       i = i + 1;
     }
-  my_putstr("exec error\n");
+  my_putstr("Command not found\n");
   kill(child, SIGINT);
 }

@@ -5,26 +5,24 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 14:28:49 2015 jamal elbouhali
-** Last update Sat Jan 31 14:59:30 2015 jamal elbouhali
+** Last update Sun Feb  1 16:41:38 2015 jamal elbouhali
 */
 
 #include "my.h"
 
-int	check_builtin(char *com)
+int	check_builtin(char **com, char **env)
 {
-  if ((my_strcmp(com, "cd\n")) == 0)
-    my_cd();
-  else if ((my_strcmp(com, "setenv\n")) == 0)
+  if ((my_strcmp(com[0], "cd")) == 0)
+    my_cd(com[1]);
+  else if ((my_strcmp(com[0], "setenv\n")) == 0)
     my_setenv();
-  else if ((my_strcmp(com, "unsetenv\n")) == 0)
+  else if ((my_strcmp(com[0], "unsetenv\n")) == 0)
     my_unsetenv();
-  else if ((my_strcmp(com, "env\n")) == 0) 
-    my_env();
-  else if ((my_strcmp(com, "exit\n")) == 0)
+  else if ((my_strcmp(com[0], "env\n")) == 0) 
+    my_env(env);
+  else if ((my_strcmp(com[0], "exit\n")) == 0)
     my_exit();
   else
-    {
-      return (1);
-    }
+    return (1);
   return (0);
 }
