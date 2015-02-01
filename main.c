@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Mon Jan 19 21:34:51 2015 jamal elbouhali
-** Last update Sat Jan 31 15:02:39 2015 jamal elbouhali
+** Last update Sun Feb  1 12:16:42 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -29,16 +29,24 @@ int	main(int ac, char **av, char **env)
   char	**path;
   char	**comm;
 
-  env2 = wtcpy(env);
-  path = get_path(env2);
+  if (env[0] != NULL)
+    {
+      env2 = wtcpy(env);
+      path = get_path(env2);
+    }
   my_putstr("$> ");
   while ((i = read(0, buf, 4096)) > 0)
     {
-      buf[i] = 0;
-      comm = str_wordtab(buf, ' ');
-      if (check_builtin(buf) == 1)
-	check_exec(comm, path, env2);
-      my_putstr("$> ");
+      if (env[0] == NULL)
+	return (1);
+      else
+	{
+	  buf[i] = 0;
+	  comm = str_wordtab(buf, ' ');
+	  if (check_builtin(buf) == 1)
+	    check_exec(comm, path, env2);
+	  my_putstr("$> ");
+	}
     }
   return (0);
 }

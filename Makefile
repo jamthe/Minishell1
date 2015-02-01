@@ -5,7 +5,7 @@
 ## Login   <elbouh_j@epitech.net>
 ## 
 ## Started on  Wed Jan 21 13:27:58 2015 jamal elbouhali
-## Last update Sat Jan 31 14:51:00 2015 jamal elbouhali
+## Last update Sat Jan 31 16:13:16 2015 jamal elbouhali
 ##
 
 CC	= gcc
@@ -13,7 +13,7 @@ CC	= gcc
 RM	= rm -f
 
 #CFLAGS	+= -Wextra -Wall #-Werror
-CFLAGS	+= -ansi -pedantic
+CFLAGS	+= -pedantic
 CFLAGS	+= -I.
 
 NAME	= mysh

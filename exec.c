@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 13:38:34 2015 jamal elbouhali
-** Last update Fri Jan 30 22:58:27 2015 jamal elbouhali
+** Last update Sun Feb  1 12:28:22 2015 jamal elbouhali
 */
 
 #include <unistd.h>
@@ -14,19 +14,30 @@
 
 char	**check_exec(char **com, char **path, char **env)
 {
-  int	i;
   char	*s;
+  pid_t	child;
+  int	i;
+  int	a;
 
   i = 0;
-  while (path[i] != NULL)
+  if ((child = fork()) == -1)
     {
-      s = my_strcat(path[i], com[0]);
-      if (access(s, X_OK) == 0)
-	{
-	  execve(s, com, env);
-	  return (env);
-	}
-      i = i + 1;
+      my_putstr("fork error");
+      return (NULL);
     }
-  return (NULL);
+  if (child == 0)
+    {
+      while (path[i] != NULL)
+	{
+	  s = my_strcat(path[i], com[0]);
+	  if (access(s, X_OK) == 0)
+	    {
+	      execve(s, com, env);
+	      return (NULL);
+	    }
+	  i = i + 1;
+	}
+    }
+  else
+    wait(NULL);
 }

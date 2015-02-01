@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Thu Jan 22 13:56:51 2015 jamal elbouhali
-** Last update Sat Jan 31 14:51:09 2015 jamal elbouhali
+** Last update Sat Jan 31 16:06:09 2015 jamal elbouhali
 */
 
 #ifndef MY_H_
@@ -45,5 +45,6 @@ int	my_tab_len(char **env);
 char	**wtcpy(char **env);
 char	*my_strcat(char *dest, char *src);
 char	**get_path(char **env);
+char	**create_path(char **com, char **path);
 
 #endif /* !MY_H_ */
