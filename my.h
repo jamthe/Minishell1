@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Thu Jan 22 13:56:51 2015 jamal elbouhali
-** Last update Sun Feb  1 23:05:31 2015 jamal elbouhali
+** Last update Sun Feb  1 23:28:29 2015 jamal elbouhali
 */
 
 #ifndef MY_H_
@@ -19,8 +19,8 @@ void		show(char **tab);
 char		*my_getenv(char *str, char **env);
 void		*xmalloc(int size);
 char		**word_tab(char *str, char j);
-int		yy(char *str, char d);
-int		xx(char *str, char j);
+int		yy(char *str, char x);
+int		xx(char *str, char x);
 char		*get_env(char *str, char **env);
 void		my_putstr(char *str);
 void		my_putchar(char c);

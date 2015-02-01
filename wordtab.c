@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 11:25:53 2015 jamal elbouhali
-** Last update Sun Feb  1 23:17:56 2015 jamal elbouhali
+** Last update Sun Feb  1 23:30:08 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -21,8 +21,8 @@ int	yy(char *str, char x)
   while (str[i] != '\0')
     {
       if (str[i] == x && str[i + 1] != '\0')
-	j = j + 1;
-      i = i + 1;
+	j++;
+      i++;
     }
   return (j);
 }
@@ -32,9 +32,9 @@ int	xx(char *str, char x)
   int	i;
 
   i = 0;
-  while ((str[i] != x) && (str[i] != '\0'))
-    i = i + 1;
-  i = i + 1;
+  while ((str[i] != '\0') && (str[i] != x))
+    i++;
+  i++;
   return (i);
 }
 
