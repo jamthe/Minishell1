@@ -5,13 +5,15 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Thu Jan 22 13:56:51 2015 jamal elbouhali
-** Last update Sun Feb  1 16:41:34 2015 jamal elbouhali
+** Last update Sun Feb  1 17:32:38 2015 jamal elbouhali
 */
 
 #ifndef MY_H_
 # define MY_H_
 
 # include <unistd.h>
+# include <sys/types.h>
+# include <signal.h>
 
 typedef struct	s_struct
 {
@@ -41,7 +43,7 @@ int		my_unsetenv();
 int		my_setenv();
 int		my_env(char **env);
 int		my_exit();
-char		**check_exec(char **com, char **buf, char **env);
+int		check_exec(char **com, char **buf, char **env);
 char		*my_strcpy(char *dest, char *src);
 int		my_tab_len(char **env);
 char		**wtcpy(char **env);
@@ -49,5 +51,6 @@ char		*my_strcat(char *dest, char *src);
 char		**get_path(char **env);
 char		**create_path(char **com, char **path);
 int		exec(char **com, char **path, char **env, pid_t child);
+int		my_strncmp(char *s1, char *s2, int nb);
 
 #endif /* !MY_H_ */

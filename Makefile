@@ -5,15 +5,14 @@
 ## Login   <elbouh_j@epitech.net>
 ## 
 ## Started on  Wed Jan 21 13:27:58 2015 jamal elbouhali
-## Last update Sun Feb  1 15:56:51 2015 jamal elbouhali
+## Last update Sun Feb  1 17:55:52 2015 jamal elbouhali
 ##
 
 CC	= gcc
 
 RM	= rm -f
 
-#CFLAGS	+= -Wextra -Wall #-Werror
-CFLAGS	+= -pedantic
+CFLAGS	+= -Wextra -Wall -Werror
 CFLAGS	+= -I.
 
 NAME	= mysh
@@ -25,10 +24,11 @@ SRCS	= main.c \
 	  builtin.c \
 	  fbuiltin.c \
 	  my_wtcpy.c \
-	  exec.c \
 	  init.c \
 	  show.c \
-	  wordtab.c 
+	  wordtab.c \
+	  exec.c 
+
 
 OBJS	= $(SRCS:.c=.o)
 

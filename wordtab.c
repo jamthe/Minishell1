@@ -5,12 +5,11 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 11:25:53 2015 jamal elbouhali
-** Last update Sun Feb  1 16:36:24 2015 jamal elbouhali
+** Last update Sun Feb  1 17:12:31 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
 #include "my.h"
-
 
 int	my_countY(char *str, char d)
 {

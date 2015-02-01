@@ -5,14 +5,14 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Mon Jan 19 21:34:51 2015 jamal elbouhali
-** Last update Sun Feb  1 16:41:58 2015 jamal elbouhali
+** Last update Sun Feb  1 17:57:57 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
-#include "my.h"
 #include <unistd.h>
 #include <stdio.h>
 #include <signal.h>
+#include "my.h"
 
 char	**get_path(char **env)
 {
@@ -30,6 +30,8 @@ int	main(int ac, char **av, char **env)
   char	**path;
   char	**comm;
 
+  (void)ac;
+  (void)av;
   signal(SIGINT, SIG_IGN);
   if (env[0] != NULL)
     {

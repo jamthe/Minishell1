@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 18:37:04 2015 jamal elbouhali
-** Last update Sun Feb  1 16:39:11 2015 jamal elbouhali
+** Last update Sun Feb  1 17:28:36 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -20,15 +20,15 @@ int	my_cd(char *com)
   return (0);
 }
 
-int	my_unsetenv(char **env)
+int	my_unsetenv()
 {
-  my_putstr("my\n");
+  my_putstr("Minishell2 en cours\n");
   return (0);
 }
 
-int	my_setenv(char **env)
+int	my_setenv()
 {
-  my_putstr("name\n");
+  my_putstr("Minishell2 en cours\n");
   return (0);
 }
 
@@ -38,7 +38,7 @@ int	my_env(char **env)
   return (0);
 }
 
-int	my_exit(char **env)
+int	my_exit()
 {
   my_putstr("Bisous bisous coeur <3\n");
   exit(0);
