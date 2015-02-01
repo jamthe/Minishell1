@@ -5,11 +5,13 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Thu Jan 22 13:56:51 2015 jamal elbouhali
-** Last update Sat Jan 31 16:06:09 2015 jamal elbouhali
+** Last update Sun Feb  1 14:11:41 2015 jamal elbouhali
 */
 
 #ifndef MY_H_
 # define MY_H_
+
+# include <unistd.h>
 
 typedef struct s_struct
 {
@@ -46,5 +48,6 @@ char	**wtcpy(char **env);
 char	*my_strcat(char *dest, char *src);
 char	**get_path(char **env);
 char	**create_path(char **com, char **path);
+int	exec(char **com, char **path, char **env, pid_t child);
 
 #endif /* !MY_H_ */
