@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 11:25:53 2015 jamal elbouhali
-** Last update Sun Feb  1 18:32:25 2015 jamal elbouhali
+** Last update Sun Feb  1 19:58:43 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -45,12 +45,14 @@ int	my_x(char *str, char j)
   return (i);
 }
 
-char		**str_wordtab(char *str, char j)
+char		**word_tab(char *str, char j)
 {
   char		**tab;
   t_struct	c;
 
   init(&c);
+  if (str == NULL)
+    return (NULL);
   if ((tab = xmalloc(sizeof(*tab) *
 		     ((my_y(str, j) + 1)))) == NULL)
     return (NULL);

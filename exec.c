@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 13:38:34 2015 jamal elbouhali
-** Last update Sun Feb  1 17:55:16 2015 jamal elbouhali
+** Last update Sun Feb  1 19:59:57 2015 jamal elbouhali
 */
 
 #include <unistd.h>
@@ -35,6 +35,8 @@ int	exec(char **com, char **path, char **env, pid_t child)
   char	*s;
 
   i = 0;
+  if (path == NULL)
+    return (1);
   while (path[i] != NULL)
     {
       signal(SIGINT, 0);

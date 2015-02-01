@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 13:45:46 2015 jamal elbouhali
-** Last update Wed Jan 28 13:10:45 2015 jamal elbouhali
+** Last update Sun Feb  1 19:57:45 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -22,6 +22,8 @@ char    *my_getenv(char *str, char **env)
     return (NULL);
   while (env[i] && my_strncmp(str, env[i], my_strlen(str)) != 0)
     i++;
+  if (!env[i])
+    return (NULL);
   j = &(env[i][my_strlen(str)]);
   return (j);
 }
