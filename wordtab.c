@@ -5,13 +5,20 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Wed Jan 28 11:25:53 2015 jamal elbouhali
-** Last update Sun Feb  1 17:12:31 2015 jamal elbouhali
+** Last update Sun Feb  1 18:32:25 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
 #include "my.h"
 
-int	my_countY(char *str, char d)
+void    init(t_struct *c)
+{
+  c->i = 0;
+  c->j = 0;
+  c->b = 0;
+}
+
+int	my_y(char *str, char d)
 {
   int	i;
   int	j;
@@ -27,7 +34,7 @@ int	my_countY(char *str, char d)
   return (j);
 }
 
-int	my_countX(char *str, char j)
+int	my_x(char *str, char j)
 {
   int	i;
 
@@ -45,14 +52,14 @@ char		**str_wordtab(char *str, char j)
 
   init(&c);
   if ((tab = xmalloc(sizeof(*tab) *
-		     ((my_countY(str, j) + 1)))) == NULL)
+		     ((my_y(str, j) + 1)))) == NULL)
     return (NULL);
   while (str[c.i] != '\0')
     {
       while (str[c.i] == j)
 	c.i = c.i + 1;
       if ((tab[c.j] = xmalloc(sizeof(char) *
-			      (my_countX(str + c.i, j) + 1))) == NULL)
+			      (my_x(str + c.i, j) + 1))) == NULL)
 	return (NULL);
       c.b = 0;
       while ((str[c.i] != j && str[c.i] != '\0'))

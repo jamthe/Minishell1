@@ -5,7 +5,7 @@
 ## Login   <elbouh_j@epitech.net>
 ## 
 ## Started on  Wed Jan 21 13:27:58 2015 jamal elbouhali
-## Last update Sun Feb  1 17:55:52 2015 jamal elbouhali
+## Last update Sun Feb  1 18:30:32 2015 jamal elbouhali
 ##
 
 CC	= gcc
@@ -23,8 +23,6 @@ SRCS	= main.c \
 	  my_str2.c \
 	  builtin.c \
 	  fbuiltin.c \
-	  my_wtcpy.c \
-	  init.c \
 	  show.c \
 	  wordtab.c \
 	  exec.c 

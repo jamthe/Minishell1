@@ -1,11 +1,11 @@
 /*
-** show.c for show.c in /home/elbouh_j/str_to_world_tab
+** show.c for show.c in /home/elbouh_j/PSU_2014_minishell1
 ** 
 ** Made by jamal elbouhali
 ** Login   <elbouh_j@epitech.net>
 ** 
-** Started on  Wed Jan 28 13:06:32 2015 jamal elbouhali
-** Last update Wed Jan 28 13:07:05 2015 jamal elbouhali
+** Started on  Sun Feb  1 18:19:56 2015 jamal elbouhali
+** Last update Sun Feb  1 18:19:57 2015 jamal elbouhali
 */
 
 #include "my.h"

@@ -5,7 +5,7 @@
 ** Login   <elbouh_j@epitech.net>
 ** 
 ** Started on  Tue Jan 27 18:37:04 2015 jamal elbouhali
-** Last update Sun Feb  1 17:28:36 2015 jamal elbouhali
+** Last update Sun Feb  1 18:25:37 2015 jamal elbouhali
 */
 
 #include <stdlib.h>
@@ -16,7 +16,7 @@ int	my_cd(char *com)
 {
   com[my_strlen(com) - 1] = 0;
   if (chdir(com) == -1)
-    my_putstr("KSE");
+    my_putstr("cd fail\n");
   return (0);
 }
 
